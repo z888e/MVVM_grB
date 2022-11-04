@@ -8,7 +8,7 @@
 import Foundation
 
 struct Step: Codable {
-    var time: Date
+    var time: Date?
     var description: String?
 }
 
