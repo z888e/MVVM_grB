@@ -8,6 +8,7 @@
 import Foundation
 
 struct Recipe: Codable {
+    var id : Int
     var recipeName: String
     var description: String
     var image: String
