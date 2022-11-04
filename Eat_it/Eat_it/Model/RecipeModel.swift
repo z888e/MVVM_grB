@@ -8,12 +8,12 @@
 import Foundation
 
 struct Recipe: Codable {
-    var recipeName: String?
-    var description: String?
-    var image: String?
-    var cookingTime: String?
-    var season: String?
-    var difficulty: String?
-    var budget: String?
-    var category: String?
+    var recipeName: String
+    var description: String
+    var image: String
+    var cookingTime: String
+    var season: String
+    var difficulty: String
+    var budget: String
+    var category: String
 }
