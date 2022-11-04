@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct Recipe {
-    let recipeName: String
-    let description: String
-    let image: String
-    let cookingTime: String
-    let season: String
-    let difficulty: String
-    let budget: String
-    let category: String
+struct Recipe: Codable {
+    var recipeName: String?
+    var description: String?
+    var image: String?
+    var cookingTime: String?
+    var season: String?
+    var difficulty: String?
+    var budget: String?
+    var category: String?
 }
