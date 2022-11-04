@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SwiftUIView: View {
+struct RecipeListView: View {
     
     @EnvironmentObject var recipeViewModel: ViewModel
     private let adaptiveColumns = [
@@ -42,10 +42,10 @@ struct SwiftUIView: View {
     }
 }
 
-struct SwiftUIView_Previews: PreviewProvider {
+struct RecipeListView_Previews: PreviewProvider {
     static let recipeViewModel = ViewModel()
     static var previews: some View {
-        SwiftUIView()
+        RecipeListView()
             .environmentObject(recipeViewModel)
     }
 }
