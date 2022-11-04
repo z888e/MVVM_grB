@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+struct Recipe {
+    let recipeName: String
+    let description: String
+    let image: String
+    let cookingTime: String
+    let season: String
+    let difficulty: String
+    let budget: String
+    let category: String
+}
