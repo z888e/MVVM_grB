@@ -40,7 +40,7 @@ class ViewModel: ObservableObject {
     //-MARK: GET
     func fetchRecipes() async throws -> [Recipe] {
         //url
-        guard let url = URL(string: "\(baseURL)/index")
+        guard let url = URL(string: "\(baseURL)/recipe")
         else {
             fatalError("Missing URL")
         }
@@ -67,7 +67,7 @@ class ViewModel: ObservableObject {
     //-MARK:  POST
     func postRecipe(content: String) async throws -> Recipe {
         //url
-        guard let url = URL(string: "\(baseURL)/index")
+        guard let url = URL(string: "\(baseURL)/recipe")
         else {
             fatalError("Missing URL")
         }
@@ -99,7 +99,7 @@ class ViewModel: ObservableObject {
     //-MARK:  PUT
     func updateRecipe(_ recipe: Recipe, id: Int) async throws -> Recipe {
         //url
-        guard let url = URL(string: "\(baseURL)/\(id)")
+        guard let url = URL(string: "\(baseURL)/recipe/\(id)")
         else {throw ErrorMessage.badURL}
         //create req
         var urlRequest = URLRequest(url: url)
@@ -139,7 +139,7 @@ class ViewModel: ObservableObject {
     
     //-MARK:  DELETE
     func deleteRecipe(id: Int) async throws -> Recipe {
-        guard let url = URL(string: "\(baseURL)/\(id)")
+        guard let url = URL(string: "\(baseURL)/recipe/\(id)")
         else {
             fatalError("Missing URL")
         }
