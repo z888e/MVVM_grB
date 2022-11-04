@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B33E17E29152DFF00151CA3 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B33E17D29152DFE00151CA3 /* FilterView.swift */; };
 		C8000CF92915267F00F6B0B7 /* Eat_itApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8000CF82915267F00F6B0B7 /* Eat_itApp.swift */; };
 		C8000CFB2915267F00F6B0B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8000CFA2915267F00F6B0B7 /* ContentView.swift */; };
 		C8000CFD2915268100F6B0B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8000CFC2915268100F6B0B7 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B33E17D29152DFE00151CA3 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		C8000CF52915267F00F6B0B7 /* Eat_it.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eat_it.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8000CF82915267F00F6B0B7 /* Eat_itApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eat_itApp.swift; sourceTree = "<group>"; };
 		C8000CFA2915267F00F6B0B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				C8000D09291527CB00F6B0B7 /* RecipeView.swift */,
+				7B33E17D29152DFE00151CA3 /* FilterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				C8000CFB2915267F00F6B0B7 /* ContentView.swift in Sources */,
 				DC6BAC0C29152B87000E284F /* RecipeModel.swift in Sources */,
 				C8000CF92915267F00F6B0B7 /* Eat_itApp.swift in Sources */,
+				7B33E17E29152DFF00151CA3 /* FilterView.swift in Sources */,
 				C8000D0A291527CB00F6B0B7 /* RecipeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
