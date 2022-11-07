@@ -49,13 +49,13 @@ struct RecipeListView: View {
                 }
                 .onAppear() {
                     Task {
-//                        recipeViewModel.recipes = try await recipeViewModel.fetchRecipes()
-                        recipeViewModel.recipes = tempRecipes
+                        recipeViewModel.recipes = try await recipeViewModel.fetchRecipes()
+//                        recipeViewModel.recipes = tempRecipes
                     }
                 }
             }
             .navigationTitle("Eat It")
-        }
+        }.navigationBarHidden(true)
     }
 }
 

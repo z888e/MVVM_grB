@@ -31,7 +31,7 @@ enum ErrorMessage: Error {
 
 class ViewModel: ObservableObject {
  
-    @Published var recipes : [Recipe] = [Recipe]()
+    @Published var recipes : [Recipe] = [Recipe](tempRecipes)
     @Published var error: Error?
     
     let baseURL = "http://localhost:3000"
@@ -65,7 +65,7 @@ class ViewModel: ObservableObject {
     }
     
     //-MARK:  POST
-    func postRecipe(content: String) async throws -> Recipe {
+    func postRecipe(recipeName: String, recipeDescription: String, season: String, difficulty: String, cookingTime: String) async throws -> Recipe {
         //url
         guard let url = URL(string: "\(baseURL)/recipe")
         else {
@@ -75,7 +75,7 @@ class ViewModel: ObservableObject {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
         //add http body+headers
-        let body: [String: String] = ["content": content]
+        let body: [String: String] = ["recipeName": recipeName, "description": recipeDescription, "season": season, "difficulty": difficulty] 
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
         urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
         //encode
