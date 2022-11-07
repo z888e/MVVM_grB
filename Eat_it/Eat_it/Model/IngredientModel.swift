@@ -8,5 +8,5 @@
 import Foundation
 
 struct Ingredient {
-    let ingredient_name : String
+    let ingredient_name: String
 }

@@ -9,7 +9,7 @@ import Foundation
 
 //todo = quantity : Double in db
 struct RecipeIngredient {
-    let  recipe : Recipe
-    let quantity : Int
-    let unit : String
+    let  recipe: Recipe
+    let quantity: Int
+    let unit: String
 }
