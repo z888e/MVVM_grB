@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var recipeViewModel: ViewModel
     var body: some View {
         NavigationView {
             VStack {
@@ -27,18 +28,22 @@ struct HomeView: View {
                         Text("Sign Up").foregroundColor(Color.white)
                     }.padding()
                 }
-//                NavigationLink {
-//                    RecipeListView()
-//                } label: {
-//                        Text("se connecter sans mots de passe")
-//                }
+                NavigationLink {
+                    RecipeListView()
+                } label: {
+                        Text("se connecter sans mots de passe")
+                }
+                
             }
         }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
+    static let recipeViewModel = ViewModel()
     static var previews: some View {
         HomeView()
+            .environmentObject(recipeViewModel)
+        
     }
 }

@@ -24,7 +24,7 @@ struct SignUpView: View {
                 TextField("Votre Nom", text: $lastname, prompt: Text("Name")).border(.black, width: 1).padding()
                 TextField("Votre email", text: $email, prompt: Text("email")).border(.black, width: 1).padding()
                 TextField("Votre mots de passe", text: $password, prompt: Text("Password")).border(.black, width: 1).padding()
-                TextField("Votre Image", text: $image, prompt: Text("image")).border(.black, width: 1).padding()
+//                TextField("Votre Image", text: $image, prompt: Text("image")).border(.black, width: 1).padding()
                 TextField("Votre Pseudo", text: $username, prompt: Text("userName")).border(.black, width: 1).padding()
                 //        }
                 Button {

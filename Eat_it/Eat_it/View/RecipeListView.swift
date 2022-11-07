@@ -23,7 +23,7 @@ struct RecipeListView: View {
                             RecipeDetailView()
                         } label: {
                             VStack{
-                                Image(recipe.image)
+                                Image("Image")
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width: 170, height: 170)
@@ -38,13 +38,13 @@ struct RecipeListView: View {
                 }
                 .onAppear() {
                     Task {
-//                        recipeViewModel.recipes = try await recipeViewModel.fetchRecipes()
-                        recipeViewModel.recipes = tempRecipes
+                        recipeViewModel.recipes = try await recipeViewModel.fetchRecipes()
+//                        recipeViewModel.recipes = tempRecipes
                     }
                 }
             }
             .navigationTitle("Eat It")
-        }
+        }.navigationBarHidden(true)
     }
 }
 
