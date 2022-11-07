@@ -6,19 +6,6 @@
 //
 
 import Foundation
-//
-//struct Recipe: Codable, Identifiable {
-//    var id : Int
-//    var recipeName: String
-//    var description: String
-//    var image: String
-//    var cookingTime: String
-//    var season: String
-//    var difficulty: String
-//    var budget: String
-//    var category: String
-//}
-//
 
 struct Recipe: Codable, Identifiable{
     let id: Int
