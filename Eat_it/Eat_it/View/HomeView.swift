@@ -27,6 +27,11 @@ struct HomeView: View {
                         Text("Sign Up").foregroundColor(Color.white)
                     }.padding()
                 }
+//                NavigationLink {
+//                    RecipeListView()
+//                } label: {
+//                        Text("se connecter sans mots de passe")
+//                }
             }
         }
     }
