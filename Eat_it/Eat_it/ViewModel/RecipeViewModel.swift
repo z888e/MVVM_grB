@@ -39,6 +39,7 @@ class ViewModel: ObservableObject {
 
     //-MARK: GET
     func fetchRecipes() async throws -> [Recipe] {
+        print("1")
         //url
         guard let url = URL(string: "\(baseURL)/recipe")
         else {
@@ -110,7 +111,7 @@ class ViewModel: ObservableObject {
         //add params
         let params: [String: String] = [
             "recipeName" : String(recipe.recipeName),
-            "description" : String(recipe.description),
+            "description" : String(recipe.recipeDescription),
             "image" : String(recipe.image),
             "cookingTime" : String(recipe.cookingTime),
             "season" : String(recipe.season),

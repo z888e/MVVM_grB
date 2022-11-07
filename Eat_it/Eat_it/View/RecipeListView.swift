@@ -36,6 +36,11 @@ struct RecipeListView: View {
                         }
                     }
                 }
+                .onAppear() {
+                    Task {
+                        recipeViewModel.recipes = try await recipeViewModel.fetchRecipes()
+                    }
+                }
             }
             .navigationTitle("Eat It")
         }
