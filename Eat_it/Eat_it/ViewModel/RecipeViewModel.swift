@@ -31,7 +31,7 @@ enum ErrorMessage: Error {
 
 class ViewModel: ObservableObject {
  
-    @Published var recipes : [Recipe] = [Recipe]()
+    @Published var recipes : [Recipe] = [Recipe](tempRecipes)
     @Published var error: Error?
     
     let baseURL = "http://localhost:3000"
