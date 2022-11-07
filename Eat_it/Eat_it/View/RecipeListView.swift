@@ -23,7 +23,7 @@ struct RecipeListView: View {
                             RecipeDetailView()
                         } label: {
                             VStack{
-                                Image(recipe.image)
+                                Image("Image")
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width: 170, height: 170)
