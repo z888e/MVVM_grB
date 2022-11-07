@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12FA6ED9291915A400C1B5D5 /* FavoriteRecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FA6ED8291915A400C1B5D5 /* FavoriteRecipesView.swift */; };
 		7B33E17E29152DFF00151CA3 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B33E17D29152DFE00151CA3 /* FilterView.swift */; };
 		7B33E180291541BA00151CA3 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B33E17F291541BA00151CA3 /* UserModel.swift */; };
 		7B33E182291542CC00151CA3 /* StepModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B33E181291542CC00151CA3 /* StepModel.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12FA6ED8291915A400C1B5D5 /* FavoriteRecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipesView.swift; sourceTree = "<group>"; };
 		7B33E17D29152DFE00151CA3 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		7B33E17F291541BA00151CA3 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		7B33E181291542CC00151CA3 /* StepModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepModel.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				C8000D09291527CB00F6B0B7 /* RecipeListView.swift */,
+				12FA6ED8291915A400C1B5D5 /* FavoriteRecipesView.swift */,
 				7B33E185291554A500151CA3 /* RecipeDetailView.swift */,
 				7B33E17D29152DFE00151CA3 /* FilterView.swift */,
 			);
@@ -197,6 +200,7 @@
 				7B33E180291541BA00151CA3 /* UserModel.swift in Sources */,
 				C8000CFB2915267F00F6B0B7 /* ContentView.swift in Sources */,
 				DC6BAC0C29152B87000E284F /* RecipeModel.swift in Sources */,
+				12FA6ED9291915A400C1B5D5 /* FavoriteRecipesView.swift in Sources */,
 				C8000CF92915267F00F6B0B7 /* Eat_itApp.swift in Sources */,
 				7B33E186291554A500151CA3 /* RecipeDetailView.swift in Sources */,
 				7B33E17E29152DFF00151CA3 /* FilterView.swift in Sources */,
