@@ -25,6 +25,8 @@
 		DC6BAC0C29152B87000E284F /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6BAC0B29152B87000E284F /* RecipeModel.swift */; };
 		DCDE50122919315000B1CC39 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE50112919315000B1CC39 /* SignUpView.swift */; };
 		DCDE50162919344800B1CC39 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE50152919344800B1CC39 /* UserViewModel.swift */; };
+		DCDE5018291938FF00B1CC39 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE5017291938FF00B1CC39 /* LogInView.swift */; };
+		DCDE501A29193C3400B1CC39 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE501929193C3400B1CC39 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		DC6BAC0B29152B87000E284F /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		DCDE50112919315000B1CC39 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		DCDE50152919344800B1CC39 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		DCDE5017291938FF00B1CC39 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		DCDE501929193C3400B1CC39 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 				7B33E185291554A500151CA3 /* RecipeDetailView.swift */,
 				7B33E17D29152DFE00151CA3 /* FilterView.swift */,
 				DCDE50112919315000B1CC39 /* SignUpView.swift */,
+				DCDE5017291938FF00B1CC39 /* LogInView.swift */,
+				DCDE501929193C3400B1CC39 /* HomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -209,6 +215,7 @@
 				DC6BAC0A29152B72000E284F /* RecipeViewModel.swift in Sources */,
 				7B33E180291541BA00151CA3 /* UserModel.swift in Sources */,
 				C8000CFB2915267F00F6B0B7 /* ContentView.swift in Sources */,
+				DCDE501A29193C3400B1CC39 /* HomeView.swift in Sources */,
 				DC6BAC0C29152B87000E284F /* RecipeModel.swift in Sources */,
 				12FA6ED9291915A400C1B5D5 /* FavoriteRecipesView.swift in Sources */,
 				C8000CF92915267F00F6B0B7 /* Eat_itApp.swift in Sources */,
@@ -218,6 +225,7 @@
 				C8000D0A291527CB00F6B0B7 /* RecipeListView.swift in Sources */,
 				7B33E184291543BF00151CA3 /* UstensilModel.swift in Sources */,
 				DCDE50162919344800B1CC39 /* UserViewModel.swift in Sources */,
+				DCDE5018291938FF00B1CC39 /* LogInView.swift in Sources */,
 				7B33E182291542CC00151CA3 /* StepModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

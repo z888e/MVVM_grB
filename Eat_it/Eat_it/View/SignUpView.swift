@@ -38,6 +38,7 @@ struct SignUpView: View {
                         password = ""
                         image = ""
                         username = ""
+                        
                     }
 
                 } label: {
