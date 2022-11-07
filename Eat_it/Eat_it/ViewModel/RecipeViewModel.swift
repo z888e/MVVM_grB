@@ -166,3 +166,19 @@ class ViewModel: ObservableObject {
         }
     }
 }
+
+var tempUsers: [User] =
+[
+    User(id: 1, firstName: "User1", lastName: "Lastname1", email: "1@googly.com", password: "1234", image: "uPlaceholder1", userName: "aaa", createdAt: "2022-11-06T10:57:56.759Z", updatedAt: "2022-11-06T10:57:56.759Z"),
+    User(id: 2, firstName: "User2", lastName: "Lastname2", email: "2@googly.com", password: "1234", image: "uPlaceholder2", userName: "bbb", createdAt: "2022-11-07T00:57:56.759Z", updatedAt: "2022-11-06T10:57:56.759Z"),
+    User(id: 3, firstName: "User3", lastName: "Lastname3", email: "3@googly.com", password: "1234", image: "uPlaceholder3", userName: "ccc", createdAt: "2022-11-07T10:57:56.759Z", updatedAt: "2022-11-06T10:57:56.759Z"),
+]
+
+var tempRecipes: [Recipe] =
+[
+    Recipe(id: 1, recipeName: "Recette 1", recipeDescription: "Description 1", image: "rPlaceholder1", cookingTime: "10", season: "Fall", difficulty: "Easy", budget: 1, category: "Dessert", createdAt: "2022-11-06T10:57:56.759Z", updatedAt: "2022-11-06T10:57:56.759Z", userID: 1, user: tempUsers[0]),
+    
+    Recipe(id: 2, recipeName: "Recette 2", recipeDescription: "Description 2", image: "rPlaceholder2", cookingTime: "10", season: "Fall", difficulty: "Easy", budget: 1, category: "Dessert", createdAt: "2022-11-07T00:57:56.759Z", updatedAt: "2022-11-06T10:57:56.759Z", userID: 2, user: tempUsers[1]),
+    
+    Recipe(id: 3, recipeName: "Recette 3", recipeDescription: "Description 3", image: "rPlaceholder3", cookingTime: "10", season: "Fall", difficulty: "Easy", budget: 1, category: "Dessert", createdAt: "2022-11-07T10:57:56.759Z", updatedAt: "2022-11-06T10:57:56.759Z", userID: 3, user: tempUsers[2])
+    ]

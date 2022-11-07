@@ -11,7 +11,7 @@ struct RecipeListView: View {
     
     @EnvironmentObject var recipeViewModel: ViewModel
     private let adaptiveColumns = [
-        GridItem(.adaptive(minimum: 170))
+        GridItem(.adaptive(minimum: 150))
     ]
     
     var body: some View {
@@ -23,7 +23,7 @@ struct RecipeListView: View {
                             RecipeDetailView()
                         } label: {
                             VStack{
-                                Image("Image")
+                                Image(recipe.image)
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width: 170, height: 170)
@@ -38,7 +38,8 @@ struct RecipeListView: View {
                 }
                 .onAppear() {
                     Task {
-                        recipeViewModel.recipes = try await recipeViewModel.fetchRecipes()
+//                        recipeViewModel.recipes = try await recipeViewModel.fetchRecipes()
+                        recipeViewModel.recipes = tempRecipes
                     }
                 }
             }
