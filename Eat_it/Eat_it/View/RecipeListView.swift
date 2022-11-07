@@ -20,18 +20,29 @@ struct RecipeListView: View {
                 LazyVGrid(columns: adaptiveColumns, spacing: 20) {
                     ForEach(recipeViewModel.recipes) { recipe in
                         NavigationLink {
-                            RecipeDetailView()
+                            RecipeDetailView(recipe: recipe)
                         } label: {
-                            VStack{
+                            ZStack{
                                 Image(recipe.image)
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width: 170, height: 170)
                                     .cornerRadius(20)
                                     .shadow(color: .black, radius: 3, x:0, y: 0)
-                                Text(recipe.recipeName)
-                                    .font(.title2)
-                                    .foregroundColor(.black)
+                                VStack{
+                                    ZStack{
+                                        Color.brown.opacity(0.3)
+                                            .padding()
+                                            .foregroundColor(.white)
+                                            .font(.headline)
+                                        HStack{
+                                            Text(recipe.recipeName)
+                                                .lineLimit(2)
+                                                .font(.title2)
+                                                .foregroundColor(.white)
+                                        }
+                                    }
+                                }
                             }
                         }
                     }

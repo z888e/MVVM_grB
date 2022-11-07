@@ -20,7 +20,8 @@ struct TabBarView: View {
                     Image(systemName: "person.crop.circle.fill")
                     Text("Home")
                 }
-        }    }
+        }
+    }
 }
 
 struct TabBarView_Previews: PreviewProvider {
