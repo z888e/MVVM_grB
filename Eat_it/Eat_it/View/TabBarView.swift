@@ -21,7 +21,7 @@ struct TabBarView: View {
 //                    Image(systemName: "heart.fill")
 //                    Text("Profil(temp)")
 //                }
-            ProfileView(loggedUser: User(id: 1, firstName: "", lastName: "", email: "", password: "", image: "", username: "", createdAt: "", updatedAt: ""))
+            ProfileView(loggedUser: User(id: 1, firstName: "", lastName: "", email: "", password: "", image: "", username: "", createdAt: "", updatedAt: ""), registeredSince: "")
                 .tabItem {
                     Image(systemName: "person.fill").foregroundColor(.yellow)
                     Text("Profil")
