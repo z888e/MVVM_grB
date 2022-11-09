@@ -31,7 +31,7 @@ struct HomeView: View {
                 NavigationLink {
                     RecipeListView()
                 } label: {
-                        Text("se connecter sans mots de passe").foregroundColor(Color("vertFonce"))
+                        Text("Continue without an account").foregroundColor(Color("vertFonce"))
                 }
                 
             }
