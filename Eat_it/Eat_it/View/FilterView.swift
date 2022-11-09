@@ -28,7 +28,16 @@ struct FilterView: View {
         NavigationView{
             
             ZStack {
-                Color("vertMoyen").opacity(0.2)
+                Circle()
+                    .scale(1.7)
+                    .foregroundColor(Color("vertMoyen").opacity(0.5))
+                    .offset(y: 470)
+                Circle()
+                    .scale(1.7)
+                    .foregroundColor(Color("vertMoyen").opacity(0.5))
+                    .offset(x: 200, y: -650)
+                 
+                Color("vertMoyen").opacity(0.0)
                 .ignoresSafeArea()
                 
                 VStack{
@@ -85,7 +94,7 @@ struct FilterView: View {
                     .scrollContentBackground(.hidden)
                     .foregroundColor(.black)
                     .foregroundColor(.white)
-                    .frame(maxWidth: 450, maxHeight: 90)
+                    .frame(maxWidth: 450, maxHeight: 80)
                     
                     Spacer()
                 }
