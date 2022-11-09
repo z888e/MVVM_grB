@@ -30,8 +30,9 @@ struct TabBarView: View {
     }
 }
 
-//struct TabBarView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TabBarView().environmentObject(userVM)
-//    }
-//}
+struct TabBarView_Previews: PreviewProvider {
+    static let userVM = UserVM()
+    static var previews: some View {
+        TabBarView().environmentObject(userVM)
+    }
+}

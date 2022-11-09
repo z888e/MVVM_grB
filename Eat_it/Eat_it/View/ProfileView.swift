@@ -10,14 +10,17 @@ import SwiftUI
 struct ProfileView: View {
     
     var loggedUser: User
+    var registeredSince: String = ""
     
-//    init(user: User) {
-//        let formatter = RelativeDateTimeFormatter()
-//        formatter.unitsStyle = .short
-//        let relativeDate = formatter.localizedString(for: user.dateOfRegister, relativeTo: Date.now)
-//        self.user = user
-//        self.user.timeSinceRegister = relativeDate
-//    }
+    init(loggedUser: User, registeredSince: String) {
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = .short
+        let dateFormatter = ISO8601DateFormatter()
+        let dateFormattedRegSince = dateFormatter.date(from:loggedUser.createdAt)!
+        let relativeDate = formatter.localizedString(for: dateFormattedRegSince, relativeTo: Date.now)
+        self.loggedUser = loggedUser
+        self.registeredSince = relativeDate
+    }
     
     var body: some View {
         VStack{
@@ -32,13 +35,15 @@ struct ProfileView: View {
                 .font(.title)
                 .fontWeight(.bold)
                 .padding(10)
-//            VStack{
-//                Text(user.dateOfBirth.formatted(date: .long, time: .omitted))
-//                    .font(.callout)
-//                    .opacity(0.4)
-//                    .padding(20)
-//                Text("Inscrite " + user.timeSinceRegister)
-//            }
+            VStack{
+                Text(loggedUser.createdAt)
+                    
+                  //  .formatted(date: .long, time: .omitted))
+                    .font(.callout)
+                    .opacity(0.4)
+                    .padding(20)
+                //Text("Inscrite " + user.timeSinceRegister)
+            }
             
                 .padding(20)
             
@@ -55,6 +60,6 @@ struct ProfileView: View {
     }
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView(loggedUser: tempUsers[0])
+        ProfileView(loggedUser: tempUsers[0], registeredSince: "2022-09-22T12:21:11+0100")
     }
 }

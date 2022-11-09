@@ -152,6 +152,7 @@ var tempUsers: [User] =
     User(id: 2, firstName: "User2", lastName: "Lastname2", email: "2@googly.com", password: "1234", image: "uPlaceholder2", username: "bbb", createdAt: "2022-11-07T00:57:56.759Z", updatedAt: "2022-11-06T10:57:56.759Z"),
     User(id: 3, firstName: "User3", lastName: "Lastname3", email: "3@googly.com", password: "1234", image: "uPlaceholder3", username: "ccc", createdAt: "2022-11-07T10:57:56.759Z", updatedAt: "2022-11-06T10:57:56.759Z"),
 ]
+
 func isValidEmail(email: String) -> Bool {
     let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
 
