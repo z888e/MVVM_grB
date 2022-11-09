@@ -9,11 +9,15 @@ import SwiftUI
 
 @main
 struct Eat_itApp: App {
-    @StateObject var recipeViewModel = ViewModel()
+    
+    @StateObject var recipeVM = RecipeVM()
+    @StateObject var userVM = UserVM()
+    
     var body: some Scene {
         WindowGroup {
-            HomeView()
-                .environmentObject(recipeViewModel)
+            ContentView()
+                .environmentObject(recipeVM)
+                .environmentObject(userVM)
         }
     }
 }

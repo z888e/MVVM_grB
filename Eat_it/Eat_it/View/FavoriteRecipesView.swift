@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FavoriteRecipesView: View {
     
-    @EnvironmentObject var recipeViewModel: ViewModel
+    @EnvironmentObject var RecipeVM: RecipeVM
     private let adaptiveColumns = [
         GridItem(.adaptive(minimum: 170))
     ]

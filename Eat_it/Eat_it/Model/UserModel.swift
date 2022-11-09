@@ -10,5 +10,5 @@ import Foundation
 struct User: Codable, Identifiable {
     let id: Int
     let firstName, lastName, email, password: String
-    let image, userName, createdAt, updatedAt: String
+    let image, username, createdAt, updatedAt: String
 }

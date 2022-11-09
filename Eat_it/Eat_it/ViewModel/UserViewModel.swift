@@ -1,5 +1,5 @@
 //
-//  UserViewModel.swift
+//  UserRecipeVM.swift
 //  Eat_it
 //
 //  Created by Cynthia on 07/11/2022.
@@ -8,10 +8,11 @@
 import Foundation
 import SwiftUI
 
-class UserViewModel: ObservableObject {
+class UserVM: ObservableObject {
  
     @Published var users : [User] = [User]()
     @Published var error: Error?
+    @Published var loggedUser: User = tempUsers[0]
     
     let baseURL = "http://localhost:3000"
 
@@ -45,7 +46,7 @@ class UserViewModel: ObservableObject {
     
     //-MARK:  POST
     func postUser(firstname: String,lastName: String, email: String, password: String,
-                  image: String, userName: String) async throws -> [User] {
+                  image: String, username: String) async throws -> [User] {
         //url
         guard let url = URL(string: "\(baseURL)/users")
         else {
@@ -55,7 +56,7 @@ class UserViewModel: ObservableObject {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
         //add http body+headers
-        let body: [String: String] = ["firstName": firstname, "lastName": lastName, "email": email, "password": password, "image": image, "userName": userName]
+        let body: [String: String] = ["firstName": firstname, "lastName": lastName, "email": email, "password": password, "image": image, "username": username]
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
         urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
         //encode
@@ -94,7 +95,7 @@ class UserViewModel: ObservableObject {
             "email": String(user.email),
             "password": String(user.password),
             "image": String(user.image),
-            "userName": String(user.userName)
+            "username": String(user.username)
         ]
         urlRequest.httpBody = try? JSONEncoder().encode(params)
         //open sess
@@ -147,7 +148,7 @@ class UserViewModel: ObservableObject {
 
 var tempUsers: [User] =
 [
-    User(id: 1, firstName: "User1", lastName: "Lastname1", email: "1@googly.com", password: "1234", image: "uPlaceholder1", userName: "aaa", createdAt: "2022-11-06T10:57:56.759Z", updatedAt: "2022-11-06T10:57:56.759Z"),
-    User(id: 2, firstName: "User2", lastName: "Lastname2", email: "2@googly.com", password: "1234", image: "uPlaceholder2", userName: "bbb", createdAt: "2022-11-07T00:57:56.759Z", updatedAt: "2022-11-06T10:57:56.759Z"),
-    User(id: 3, firstName: "User3", lastName: "Lastname3", email: "3@googly.com", password: "1234", image: "uPlaceholder3", userName: "ccc", createdAt: "2022-11-07T10:57:56.759Z", updatedAt: "2022-11-06T10:57:56.759Z"),
+    User(id: 1, firstName: "User1", lastName: "Lastname1", email: "1@googly.com", password: "1234", image: "uPlaceholder1", username: "aaa", createdAt: "2022-11-06T10:57:56.759Z", updatedAt: "2022-11-06T10:57:56.759Z"),
+    User(id: 2, firstName: "User2", lastName: "Lastname2", email: "2@googly.com", password: "1234", image: "uPlaceholder2", username: "bbb", createdAt: "2022-11-07T00:57:56.759Z", updatedAt: "2022-11-06T10:57:56.759Z"),
+    User(id: 3, firstName: "User3", lastName: "Lastname3", email: "3@googly.com", password: "1234", image: "uPlaceholder3", username: "ccc", createdAt: "2022-11-07T10:57:56.759Z", updatedAt: "2022-11-06T10:57:56.759Z"),
 ]

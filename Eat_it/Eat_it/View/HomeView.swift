@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
-    @EnvironmentObject var recipeViewModel: ViewModel
+    @EnvironmentObject var recipeVM: RecipeVM
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -29,7 +30,7 @@ struct HomeView: View {
                     }.padding()
                 }
                 NavigationLink {
-                    RecipeListView()
+                    TabBarView()
                 } label: {
                         Text("se connecter sans mots de passe").foregroundColor(Color("vertFonce"))
                 }
@@ -40,10 +41,9 @@ struct HomeView: View {
 }
 
 struct HomeView_Previews: PreviewProvider {
-    static let recipeViewModel = ViewModel()
+    static let recipeVM = RecipeVM()
     static var previews: some View {
         HomeView()
-            .environmentObject(recipeViewModel)
-        
+            .environmentObject(recipeVM)
     }
 }

@@ -8,12 +8,18 @@
 import SwiftUI
 
 struct TabBarView: View {
+    
+    @EnvironmentObject var recipeVM: RecipeVM
+    @EnvironmentObject var userVM: RecipeVM
+    
     var body: some View {
         TabView {
-//            FavoriteRecipesView()
+            //FavoriteRecipesView()
+            //temp : lien vers profil
+            //ProfileView(loggedUser: $userVM.loggedUser)
 //                .tabItem {
 //                    Image(systemName: "heart.fill")
-//                    Text("Favorites")
+//                    Text("Profil(temp)")
 //                }
             RecipeListView()
                 .tabItem {
@@ -24,8 +30,8 @@ struct TabBarView: View {
     }
 }
 
-struct TabBarView_Previews: PreviewProvider {
-    static var previews: some View {
-        TabBarView()
-    }
-}
+//struct TabBarView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TabBarView().environmentObject(userVM)
+//    }
+//}

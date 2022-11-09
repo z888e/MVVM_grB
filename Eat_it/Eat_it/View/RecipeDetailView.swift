@@ -45,7 +45,7 @@ struct RecipeDetailView: View {
                             .frame(width: 50, height: 50)
                             .clipped()
                             .clipShape(Capsule())
-                        Text(recipe.user.userName)
+                        Text(recipe.user.username)
                     }
                     Text(recipe.createdAt)
                 }.padding(20)

@@ -9,7 +9,9 @@ import SwiftUI
 
 struct RecipeListView: View {
     
-    @EnvironmentObject var recipeViewModel: ViewModel
+    @EnvironmentObject var RecipeVM: RecipeVM
+    @EnvironmentObject var UserVM: RecipeVM
+    
     private let adaptiveColumns = [
         GridItem(.adaptive(minimum: 150))
     ]
@@ -18,7 +20,7 @@ struct RecipeListView: View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: adaptiveColumns, spacing: 20) {
-                    ForEach(recipeViewModel.recipes) { recipe in
+                    ForEach(RecipeVM.recipes) { recipe in
                         NavigationLink {
                             RecipeDetailView(recipe: recipe)
                         } label: {
@@ -49,8 +51,8 @@ struct RecipeListView: View {
                 }
                 .onAppear() {
                     Task {
-                        recipeViewModel.recipes = try await recipeViewModel.fetchRecipes()
-//                        recipeViewModel.recipes = tempRecipes
+                        RecipeVM.recipes = try await RecipeVM.fetchRecipes()
+//                        RecipeVM.recipes = tempRecipes
                     }
                 }
             }
@@ -60,9 +62,9 @@ struct RecipeListView: View {
 }
 
 struct RecipeListView_Previews: PreviewProvider {
-    static let recipeViewModel = ViewModel()
+    static let recipeVM = RecipeVM()
     static var previews: some View {
         RecipeListView()
-            .environmentObject(recipeViewModel)
+            .environmentObject(recipeVM)
     }
 }

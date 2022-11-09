@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddRecipeView: View {
-    @EnvironmentObject var recipeViewModel: ViewModel
+    @EnvironmentObject var RecipeVM: RecipeVM
     @State var content = ""
     @State var recipeName: String = ""
     @State var recipeDescription: String = ""
@@ -109,7 +109,7 @@ struct AddRecipeView: View {
                         .padding()
                         Button {
                             Task {
-                                try await recipeViewModel.postRecipe(recipeName: recipeName, recipeDescription: recipeDescription, season: selectedSeason, difficulty: selectedLevel, cookingTime: cookingTime)
+                                try await RecipeVM.postRecipe(recipeName: recipeName, recipeDescription: recipeDescription, season: selectedSeason, difficulty: selectedLevel, cookingTime: cookingTime)
                             }
                             Task {
                                 recipeName = ""
@@ -136,6 +136,6 @@ struct AddRecipeView: View {
 
 struct AddRecipeView_Previews: PreviewProvider {
     static var previews: some View {
-        AddRecipeView().environmentObject(ViewModel())
+        AddRecipeView().environmentObject(RecipeVM())
     }
 }

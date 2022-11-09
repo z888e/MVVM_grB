@@ -1,5 +1,5 @@
 //
-//  RecipeViewModel.swift
+//  RecipeRecipeVM.swift
 //  Eat_it
 //
 //  Created by Cynthia on 04/11/2022.
@@ -29,7 +29,7 @@ enum ErrorMessage: Error {
     }
 }
 
-class ViewModel: ObservableObject {
+class RecipeVM: ObservableObject {
  
     @Published var recipes : [Recipe] = [Recipe](tempRecipes)
     @Published var error: Error?

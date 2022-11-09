@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LogInView: View {
-    @EnvironmentObject var UserVM: UserViewModel
+    @EnvironmentObject var userVM: UserVM
     @State var email = ""
     @State var password = ""
     var body: some View {

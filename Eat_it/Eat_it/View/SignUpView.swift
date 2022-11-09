@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SignUpView: View {
-    @EnvironmentObject var UserVM: UserViewModel
+    @EnvironmentObject var userVM: UserVM
     @State var firstname = ""
     @State var lastname = ""
     @State var email = ""
@@ -25,11 +25,12 @@ struct SignUpView: View {
                 TextField("Votre email", text: $email, prompt: Text("email")).border(.black, width: 1).padding()
                 TextField("Votre mots de passe", text: $password, prompt: Text("Password")).border(.black, width: 1).padding()
 //                TextField("Votre Image", text: $image, prompt: Text("image")).border(.black, width: 1).padding()
-                TextField("Votre Pseudo", text: $username, prompt: Text("userName")).border(.black, width: 1).padding()
+                TextField("Votre Pseudo", text: $username, prompt: Text("username")).border(.black, width: 1).padding()
                 //        }
                 Button {
                     Task {
-                        UserVM.users = try await UserVM.postUser(firstname: firstname, lastName: lastname, email: email, password: password, image: image, userName: username)
+                        userVM.users = try await userVM.postUser(firstname: firstname, lastName: lastname, email: email, password: password, image: image, username: username)
+                        //UserVM.localUser = try await
                     }
                     Task {
                         firstname = ""
@@ -52,9 +53,9 @@ struct SignUpView: View {
     }
 }
 struct SignUpView_Previews: PreviewProvider {
-        static let userViewModel = UserViewModel()
+        static let userVM = UserVM()
         static var previews: some View {
             SignUpView()
-                .environmentObject(userViewModel)
+                .environmentObject(userVM)
         }
 }
