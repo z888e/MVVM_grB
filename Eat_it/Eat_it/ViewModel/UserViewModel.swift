@@ -56,7 +56,7 @@ class UserVM: ObservableObject {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
         //add http body+headers
-        let body: [String: String] = ["firstName": firstname, "lastName": lastName, "email": email, "password": password, "image": image, "username": username]
+        let body: [String: String] = ["firstName": firstname, "lastName": lastName, "email": email, "password": password, "image": image, "userName": username]
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
         urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
         //encode
@@ -159,7 +159,7 @@ func isValidEmail(email: String) -> Bool {
     return emailPred.evaluate(with: email)
 }
 func isValidPassword(password: String) -> Bool {
-    let passwordRegEx = "((?=.+[a-z])(?=.+[A-Z])(?=.+[0-9])(?=.+[@ # $ % ^ & * /])(?=.{6,}))"
+    let passwordRegEx = "^(?=.*?[A-Z])(?=.+[@ # $ % ^ & * /])(?=.*?[0-9]).{7,}$"
 
     let passwordPred = NSPredicate(format:"SELF MATCHES %@", passwordRegEx)
     return passwordPred.evaluate(with: password)
