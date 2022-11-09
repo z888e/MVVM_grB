@@ -72,7 +72,7 @@ struct SignUpView: View {
                     Button {
                         Task {
                             if ((isValidEmail(email: email)) && (isValidPassword(password: password))) {
-                                userVM.users = try await userVM.postUser(firstname: firstname, lastName: lastname, email: email, password: password, image: image, username: username)
+//                                userVM.users = try await userVM.postUser(firstname: firstname, lastName: lastname, email: email, password: password, image: image, username: username)
                             } else if ((isValidEmail(email: email) == false) && (isValidPassword(password: password) == false)){
                                     error = "Please enter a correct email"
                                     errorPassword = "Your email must contain a capital letter, a lower case letter, a number and at least 6 characters"
@@ -96,16 +96,22 @@ struct SignUpView: View {
                         }
                     } label: {
                         
-                        //                        if (isValidEmail(email: email) && isValidPassword(password: password)) {
-                        //                            NavigationLink(destination: RecipeListView()) {
-                        //                            }
-                        //                        }
-                        
-                        Text("Send")
-                            .padding()
-                            .frame(width: 300, height: 50)
-                            .background(Color("vertMoyen").opacity(0.9).cornerRadius(15))
-                            .foregroundColor(Color.white)
+                        if (isValidEmail(email: email) && isValidPassword(password: password)) {
+                            NavigationLink(destination: RecipeListView()) {                     Text("Send")
+                                    .padding()
+                                    .frame(width: 300, height: 50)
+                                    .background(Color("vertMoyen").opacity(0.9).cornerRadius(15))
+                                    .foregroundColor(Color.white)
+                            }
+                        }
+                        if (isValidEmail(email: email) == false || isValidPassword(password: password) == false) {
+                            Text("Send")
+                                .padding()
+                                .frame(width: 300, height: 50)
+                                .background(Color
+                                    .gray.opacity(0.9).cornerRadius(15))
+                                .foregroundColor(Color.white)
+                        }
                     }
                 }
             }
@@ -113,10 +119,11 @@ struct SignUpView: View {
     }
 }
 struct SignUpView_Previews: PreviewProvider {
-        static let userVM = UserVM()
+//        static let userVM = UserVM()
+        static let recipeVM = RecipeVM()
         static var previews: some View {
             SignUpView()
-                .environmentObject(userVM)
+                .environmentObject(recipeVM)
         }
 }
 
