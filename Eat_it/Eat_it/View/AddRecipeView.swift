@@ -13,6 +13,7 @@ struct AddRecipeView: View {
     @State var recipeName: String = ""
     @State var recipeDescription: String = ""
     @State var cookingTime: String = ""
+    @State var step: String = ""
 
     // Difficulty Picker
     @State  var difficulty = ["Beginner", "Easy", "Medium", "Hard"]
@@ -49,9 +50,9 @@ struct AddRecipeView: View {
                             
                             HStack{
                                 Spacer()
-                                TextField("Enter Title", text: $recipeName)
+                                TextField("Enter title", text: $recipeName)
                                 Image(systemName: "highlighter")
-                                    .font(.system(size: 30))
+                                    .font(.system(size: 25))
                                     .foregroundColor(.gray)
                                 Spacer()
                             }
@@ -60,9 +61,9 @@ struct AddRecipeView: View {
                             
                             HStack {
                                 Spacer()
-                                TextField("Enter Description", text: $recipeDescription)
+                                TextField("Enter description", text: $recipeDescription)
                                 Image(systemName: "keyboard")
-                                    .font(.system(size: 30))
+                                    .font(.system(size: 25))
                                     .foregroundColor(.gray)
                                 Spacer()
                             }
@@ -71,9 +72,9 @@ struct AddRecipeView: View {
                             
                             HStack {
                                 Spacer()
-                                TextField("Enter time", text: $cookingTime)
+                                TextField("Enter time in minute", text: $cookingTime)
                                 Image(systemName: "clock")
-                                    .font(.system(size: 30))
+                                    .font(.system(size: 25))
                                     .foregroundColor(.gray)
                                 Spacer()
                             }
@@ -95,7 +96,7 @@ struct AddRecipeView: View {
                             }
                             .frame(width: 350)
                             .pickerStyle(.segmented)
-                           
+                            
                             //Season Picker
                             Text("Choose a season : \(selectedSeason)").fontWeight(.light).foregroundColor(Color("vertFonce")).frame(maxWidth: 350, alignment: .leading)
                             Picker("", selection: $selectedSeason) {
@@ -105,6 +106,18 @@ struct AddRecipeView: View {
                             }
                             .frame(width: 350)
                             .pickerStyle(.segmented)
+                            
+//                            HStack {
+//                                Spacer()
+//                                TextField("Enter steps", text: $step)
+//                                Image(systemName: "step")
+//                                    .font(.system(size: 25))
+//                                    .foregroundColor(.gray)
+//                                Spacer()
+//                            }
+//                            .frame(width: 370, height: 50)
+//                            .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1).foregroundColor(Color("vertMoyen")))
+//                            
                         }
                         .padding()
                         Button {
@@ -129,6 +142,8 @@ struct AddRecipeView: View {
                         .offset(y: 50)
                     }
                 }
+                .navigationTitle("Add recipe")
+                .navigationBarTitleDisplayMode(.inline)
             }
         }
     }

@@ -28,7 +28,7 @@ struct FilterView: View {
         NavigationView{
             
             ZStack {
-                Color("vertMoyen").opacity(0.5)
+                Color("vertMoyen").opacity(0.2)
                 .ignoresSafeArea()
                 
                 VStack{
