@@ -12,30 +12,54 @@ struct LogInView: View {
     @State var email = ""
     @State var password = ""
     var body: some View {
-
-        VStack {
-            Text("Login Up")
-            ScrollView {
-                TextField("Votre email", text: $email, prompt: Text("email")).border(.black, width: 1).padding()
-                TextField("Votre mots de passe", text: $password, prompt: Text("Password")).border(.black, width: 1).padding()
-                //        }
-                Button {
-                    Task {
-//                        UserVM.users = try await UserVM.postUser(email: email, password: password)
-                    }
-                    Task {
-                        email = ""
-                        password = ""
-                    }
-
-                } label: {
-                    VStack{
-                        Text("Send")
+        NavigationView {
+            ZStack {
+                Color("vertFonce").opacity(0.9)
+                    .ignoresSafeArea()
+                Circle()
+                    .scale(1.7)
+                    .foregroundColor(.white.opacity(0.15))
+                Circle()
+                   .scale(1.35)
+                   .foregroundColor(.white)
+                
+                VStack {
+                    Text("Login")
+                        .foregroundColor(Color("vertFonce"))
+                        .font(.largeTitle)
+                        .bold()
+                        .padding()
+                    TextField("Email", text: $email)
+                        .padding()
+                        .frame(width: 300, height: 50)
+                        .background(Color(.black).opacity(0.05))
+                        .cornerRadius(15)
+                        .overlay(RoundedRectangle(cornerRadius: 15).stroke(lineWidth: 1).foregroundColor(Color.black.opacity(0.3)))
+                    TextField("Password", text: $email)
+                        .padding()
+                        .frame(width: 300, height: 50)
+                        .background(Color(.black).opacity(0.05))
+                        .cornerRadius(15)
+                        .overlay(RoundedRectangle(cornerRadius: 15).stroke(lineWidth: 1).foregroundColor(Color.black.opacity(0.3)))
+                    
+                    Button {
+                        Task {
+                            //                        UserVM.users = try await UserVM.postUser(email: email, password: password)
+                        }
+                        Task {
+                            email = ""
+                            password = ""
+                        }
+                    } label: {
+                            Text("Send")
+                            .padding()
+                            .frame(width: 300, height: 50)
+                            .background(Color("vertMoyen").opacity(0.9).cornerRadius(15))
+                            .foregroundColor(Color.white)
                     }
                 }
             }
         }
-
     }
 }
 

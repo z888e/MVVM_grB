@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		12FA6ED9291915A400C1B5D5 /* FavoriteRecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FA6ED8291915A400C1B5D5 /* FavoriteRecipesView.swift */; };
 		7B1B6EB1291953B5001D9717 /* AddRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1B6EB0291953B5001D9717 /* AddRecipeView.swift */; };
+		7B1B6EB329196572001D9717 /* StepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1B6EB229196572001D9717 /* StepViewModel.swift */; };
 		7B33E17E29152DFF00151CA3 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B33E17D29152DFE00151CA3 /* FilterView.swift */; };
 		7B33E180291541BA00151CA3 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B33E17F291541BA00151CA3 /* UserModel.swift */; };
 		7B33E182291542CC00151CA3 /* StepModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B33E181291542CC00151CA3 /* StepModel.swift */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		12FA6ED8291915A400C1B5D5 /* FavoriteRecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipesView.swift; sourceTree = "<group>"; };
 		7B1B6EB0291953B5001D9717 /* AddRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeView.swift; sourceTree = "<group>"; };
+		7B1B6EB229196572001D9717 /* StepViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepViewModel.swift; sourceTree = "<group>"; };
 		7B33E17D29152DFE00151CA3 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		7B33E17F291541BA00151CA3 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		7B33E181291542CC00151CA3 /* StepModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepModel.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			children = (
 				DC6BAC0929152B72000E284F /* RecipeViewModel.swift */,
 				DCDE50152919344800B1CC39 /* UserViewModel.swift */,
+				7B1B6EB229196572001D9717 /* StepViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				C876832B291BA9280008212A /* ProfileView.swift in Sources */,
 				7B33E17E29152DFF00151CA3 /* FilterView.swift in Sources */,
 				DCDE50122919315000B1CC39 /* SignUpView.swift in Sources */,
+				7B1B6EB329196572001D9717 /* StepViewModel.swift in Sources */,
 				C8000D0A291527CB00F6B0B7 /* RecipeListView.swift in Sources */,
 				7B33E184291543BF00151CA3 /* UstensilModel.swift in Sources */,
 				DCDE50162919344800B1CC39 /* UserViewModel.swift in Sources */,

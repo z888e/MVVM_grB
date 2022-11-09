@@ -13,38 +13,59 @@ struct SignUpView: View {
     @State var lastname = ""
     @State var email = ""
     @State var image = ""
-    @State var password = ""
-    @State var username = ""
+    @State var password = "shjvbjAZEER12445@"
+    @State var username = "sdhjvb"
+    @State var error = ""
+    @State var errorPassword = ""
+    
     var body: some View {
 
-        VStack {
-            Text("Sign Up")
-            ScrollView {
-                TextField("Votre Prénom", text: $firstname, prompt: Text("Firstname")).border(.black, width: 1).padding()
-                TextField("Votre Nom", text: $lastname, prompt: Text("Name")).border(.black, width: 1).padding()
-                TextField("Votre email", text: $email, prompt: Text("email")).border(.black, width: 1).padding()
-                TextField("Votre mots de passe", text: $password, prompt: Text("Password")).border(.black, width: 1).padding()
-//                TextField("Votre Image", text: $image, prompt: Text("image")).border(.black, width: 1).padding()
-                TextField("Votre Pseudo", text: $username, prompt: Text("username")).border(.black, width: 1).padding()
-                //        }
-                Button {
-                    Task {
-                        userVM.users = try await userVM.postUser(firstname: firstname, lastName: lastname, email: email, password: password, image: image, username: username)
-                        //UserVM.localUser = try await
-                    }
-                    Task {
-                        firstname = ""
-                        lastname = ""
-                        email = ""
-                        password = ""
-                        image = ""
-                        username = ""
+        NavigationView {
+            VStack {
+                Text("Sign Up")
+                ScrollView {
+                    TextField("Votre Prénom", text: $firstname, prompt: Text("Firstname")).border(.black, width: 1).padding()
+                    TextField("Votre Nom", text: $lastname, prompt: Text("Name")).border(.black, width: 1).padding()
+                    TextField("Votre email", text: $email, prompt: Text("email")).border(.black, width: 1).padding()
+                    Text(error)
+                    TextField("Votre mots de passe", text: $password, prompt: Text("Password")).border(.black, width: 1).padding()
+                    Text(errorPassword)
+                    //                TextField("Votre Image", text: $image, prompt: Text("image")).border(.black, width: 1).padding()
+                    TextField("Votre Pseudo", text: $username, prompt: Text("userName")).border(.black, width: 1).padding()
+                    //        }
+                    Button {
+                        Task {
+                            if (isValidEmail(email: email)||isValidPassword(password: password)) {
+                                userVM.users = try await userVM.postUser(firstname: firstname, lastName: lastname, email: email, password: password, image: image, username: username)
+                            } else if (isValidEmail(email: email) == false && isValidPassword(password: password) == false){
+                                error = "Veuillez rentrer un email correct"
+                                errorPassword = "Votre email doit contenir une majuscule, une minuscule, un chiffre et au moins 6 caractères"
+                            } else if(isValidPassword(password: password) == false) {
+                                errorPassword = "Votre mot de passe doit contenir une majuscule, une minuscule, un chiffre et au moins 6 caractères"
+                            } else {
+                                error = "Veuillez rentrer un email correct"
+                            }
+                            
+                        }
+                        if (isValidEmail(email: email)||isValidPassword(password: password)) {
+                            Task {
+                                firstname = ""
+                                lastname = ""
+                                email = ""
+                                password = ""
+                                image = ""
+                                username = ""
+                            }
+                        }
                         
-                    }
-
-                } label: {
-                    VStack{
-                        Text("Send")
+                    } label: {
+//                        if (isValidEmail(email: email) && isValidPassword(password: password)) {
+//                            NavigationLink(destination: RecipeListView()) {
+                                VStack{
+                                    Text("Send")
+                                }
+//                            }
+//                        }
                     }
                 }
             }

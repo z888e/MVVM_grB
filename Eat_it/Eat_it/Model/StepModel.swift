@@ -7,8 +7,18 @@
 
 import Foundation
 
+// MARK: - Step
 struct Step: Codable {
-    var time: Date?
-    var description: String?
-}
+    let id: Int
+    let time, stepDescription, createdAt, updatedAt: String
+    let recipeID: Int
+    let recipe: Recipe
 
+    enum CodingKeys: String, CodingKey {
+        case id, time
+        case stepDescription = "description"
+        case createdAt, updatedAt
+        case recipeID = "recipeId"
+        case recipe
+    }
+}
