@@ -21,10 +21,20 @@ struct TabBarView: View {
 //                    Image(systemName: "heart.fill")
 //                    Text("Profil(temp)")
 //                }
+            ProfileView(loggedUser: User(id: 1, firstName: "", lastName: "", email: "", password: "", image: "", username: "", createdAt: "", updatedAt: ""))
+                .tabItem {
+                    Image(systemName: "person.fill").foregroundColor(.yellow)
+                    Text("Profil")
+                }
+            FavoriteRecipesView()
+                .tabItem {
+                    Image(systemName: "heart.fill")
+                    Text("Favorite")
+                }
             RecipeListView()
                 .tabItem {
-                    Image(systemName: "person.crop.circle.fill")
-                    Text("Home")
+                    Image(systemName: "applelogo")
+                    Text("Recipes")
                 }
         }
     }
