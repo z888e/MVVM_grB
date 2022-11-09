@@ -12,29 +12,35 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                NavigationLink {
-                    LogInView()
-                } label: {
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 50).frame(width: 150, height: 70).foregroundColor(Color("vertMoyen")).padding()
-                        Text("Login").foregroundColor(Color.white)
-                    }.padding()
+            ZStack {
+                Color("vertMoyen").opacity(0.7)
+                    .ignoresSafeArea()
+                VStack {
+                    Spacer()
+                    NavigationLink {
+                        LogInView()
+                    } label: {
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 50).frame(width: 150, height: 70).foregroundColor(Color("vertMoyen")).padding()
+                            Text("Log In").foregroundColor(Color.white).fontWeight(.semibold)
+                        }.padding()
+                    }
+                    NavigationLink {
+                        SignUpView()
+                    } label: {
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 50).frame(width: 150, height: 70).foregroundColor(Color("vertClair")).padding()
+                            Text("Sign Up").foregroundColor(Color.white).fontWeight(.semibold)
+                        }.padding()
+                    }
+                    Spacer()
+                    NavigationLink {
+                        TabBarView()
+                    } label: {
+                        Text("Continue without an account").foregroundColor(Color.white)
+                    }
+                    Spacer()
                 }
-                NavigationLink {
-                    SignUpView()
-                } label: {
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 50).frame(width: 150, height: 70).foregroundColor(Color("vertClair")).padding()
-                        Text("Sign Up").foregroundColor(Color.white)
-                    }.padding()
-                }
-                NavigationLink {
-                    TabBarView()
-                } label: {
-                        Text("Continue without an account").foregroundColor(Color("vertFonce"))
-                }
-                
             }
         }
     }

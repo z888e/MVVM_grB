@@ -9,23 +9,49 @@ import SwiftUI
 
 struct FavoriteRecipesView: View {
     
-    @EnvironmentObject var RecipeVM: RecipeVM
+    @EnvironmentObject var FavoriteVM: FavoriteVM
     private let adaptiveColumns = [
         GridItem(.adaptive(minimum: 170))
     ]
     
     var body: some View {
         NavigationView {
-            //ScrollView {
-                //LazyVGrid(columns: adaptiveColumns, spacing: 20)
+            
+            VStack {
+                
+                ForEach(FavoriteVM.favorites) { favorite in
+                    Text(favorite.recipe.recipeName)
+                }
+                HStack {
+                    Text("Recent Discoveries")
+                    // Slider (En horizontal)
                     
+                    HStack {
+                        Text("Preferred Recipes by your Community")
+                        // Slider(En horizontal)
+                        
+                        
+                    HStack {
+                        Text("Your Favorite Recipes - Forever Ever")
+                            // Slider(En horizontal)
+
+                            
+                            
+                            
+                            //.navigationTitle("Vos recettes préférées)
+                            //.navigationBarTitleDisplayMode(.inline)
+                        }
+                    }
+                }
             }
-            .navigationTitle("Vos recettes préférées")
         }
     }
+}
 
 struct FavoriteRecipesView_Previews: PreviewProvider {
+    static let favoritevm = FavoriteVM()
     static var previews: some View {
         FavoriteRecipesView()
+            .environmentObject(favoritevm)
     }
 }

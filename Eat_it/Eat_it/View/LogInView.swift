@@ -24,7 +24,7 @@ struct LogInView: View {
                    .foregroundColor(.white)
                 
                 VStack {
-                    Text("Login")
+                    Text("Log In")
                         .foregroundColor(Color("vertFonce"))
                         .font(.largeTitle)
                         .bold()

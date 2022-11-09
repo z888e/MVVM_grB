@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1275238D291C082800EFC387 /* FavoriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1275238C291C082800EFC387 /* FavoriteModel.swift */; };
+		1275238F291C0B5200EFC387 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1275238E291C0B5200EFC387 /* FavoriteViewModel.swift */; };
 		12FA6ED9291915A400C1B5D5 /* FavoriteRecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FA6ED8291915A400C1B5D5 /* FavoriteRecipesView.swift */; };
 		7B1B6EB1291953B5001D9717 /* AddRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1B6EB0291953B5001D9717 /* AddRecipeView.swift */; };
 		7B1B6EB329196572001D9717 /* StepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1B6EB229196572001D9717 /* StepViewModel.swift */; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1275238C291C082800EFC387 /* FavoriteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteModel.swift; sourceTree = "<group>"; };
+		1275238E291C0B5200EFC387 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 		12FA6ED8291915A400C1B5D5 /* FavoriteRecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipesView.swift; sourceTree = "<group>"; };
 		7B1B6EB0291953B5001D9717 /* AddRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeView.swift; sourceTree = "<group>"; };
 		7B1B6EB229196572001D9717 /* StepViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepViewModel.swift; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				DC6BAC0929152B72000E284F /* RecipeViewModel.swift */,
+				1275238E291C0B5200EFC387 /* FavoriteViewModel.swift */,
 				DCDE50152919344800B1CC39 /* UserViewModel.swift */,
 				7B1B6EB229196572001D9717 /* StepViewModel.swift */,
 			);
@@ -139,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				DC6BAC0B29152B87000E284F /* RecipeModel.swift */,
+				1275238C291C082800EFC387 /* FavoriteModel.swift */,
 				7B33E17F291541BA00151CA3 /* UserModel.swift */,
 				7B33E181291542CC00151CA3 /* StepModel.swift */,
 				7B33E183291543BE00151CA3 /* UstensilModel.swift */,
@@ -222,11 +228,13 @@
 				C80C03362915421600F500B2 /* IngredientModel.swift in Sources */,
 				C8636F792919373C00013259 /* TabBarView.swift in Sources */,
 				DC6BAC0A29152B72000E284F /* RecipeViewModel.swift in Sources */,
+				1275238F291C0B5200EFC387 /* FavoriteViewModel.swift in Sources */,
 				7B33E180291541BA00151CA3 /* UserModel.swift in Sources */,
 				C8000CFB2915267F00F6B0B7 /* ContentView.swift in Sources */,
 				DCDE501A29193C3400B1CC39 /* HomeView.swift in Sources */,
 				DC6BAC0C29152B87000E284F /* RecipeModel.swift in Sources */,
 				12FA6ED9291915A400C1B5D5 /* FavoriteRecipesView.swift in Sources */,
+				1275238D291C082800EFC387 /* FavoriteModel.swift in Sources */,
 				C8000CF92915267F00F6B0B7 /* Eat_itApp.swift in Sources */,
 				7B1B6EB1291953B5001D9717 /* AddRecipeView.swift in Sources */,
 				7B33E186291554A500151CA3 /* RecipeDetailView.swift in Sources */,
