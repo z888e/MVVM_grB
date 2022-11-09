@@ -96,16 +96,22 @@ struct SignUpView: View {
                         }
                     } label: {
                         
-                        //                        if (isValidEmail(email: email) && isValidPassword(password: password)) {
-                        //                            NavigationLink(destination: RecipeListView()) {
-                        //                            }
-                        //                        }
-                        
-                        Text("Send")
-                            .padding()
-                            .frame(width: 300, height: 50)
-                            .background(Color("vertMoyen").opacity(0.9).cornerRadius(15))
-                            .foregroundColor(Color.white)
+                        if (isValidEmail(email: email) && isValidPassword(password: password)) {
+                            NavigationLink(destination: RecipeListView()) {                     Text("Send")
+                                    .padding()
+                                    .frame(width: 300, height: 50)
+                                    .background(Color("vertMoyen").opacity(0.9).cornerRadius(15))
+                                    .foregroundColor(Color.white)
+                            }
+                        }
+                        if (isValidEmail(email: email) == false || isValidPassword(password: password) == false) {
+                            Text("Send")
+                                .padding()
+                                .frame(width: 300, height: 50)
+                                .background(Color
+                                    .gray.opacity(0.9).cornerRadius(15))
+                                .foregroundColor(Color.white)
+                        }
                     }
                 }
             }
@@ -113,10 +119,11 @@ struct SignUpView: View {
     }
 }
 struct SignUpView_Previews: PreviewProvider {
-        static let userVM = UserVM()
+//        static let userVM = UserVM()
+        static let recipeVM = RecipeVM()
         static var previews: some View {
             SignUpView()
-                .environmentObject(userVM)
+                .environmentObject(recipeVM)
         }
 }
 
