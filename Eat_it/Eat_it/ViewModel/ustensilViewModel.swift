@@ -139,5 +139,6 @@ class UstensilVM: ObservableObject {
 
 var tempUstensil: [Ustensil] =
 [
-    Ustensil(id: 1, name: "")
+    Ustensil(id: 1, name: "fouet"),
+    Ustensil(id: 1, name: "couteau")
 ]
