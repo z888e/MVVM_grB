@@ -9,13 +9,14 @@ import Foundation
 import SwiftUI
 
 class UserVM: ObservableObject {
- 
+    
     @Published var users : [User] = [User]()
     @Published var error: Error?
     @Published var loggedUser: User = tempUsers[0]
-    
-    let baseURL = "http://localhost:3000"
+    @Published var registeredSince: String = "now?"
 
+    let baseURL = "http://localhost:3000"
+    
     //-MARK: GET
     func fetchUsers() async throws -> [User] {
         print("1")
@@ -144,6 +145,15 @@ class UserVM: ObservableObject {
             self.error = error
         }
     }
+    
+    func relativeTime() async -> String{
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = .short
+        let dateFormatter = ISO8601DateFormatter()
+        let dateFormattedRegSince = dateFormatter.date(from: loggedUser.createdAt) ?? Date()-100
+        let relativeDate = formatter.localizedString(for: dateFormattedRegSince, relativeTo: Date.now)
+        return relativeDate
+    }
 }
 
 var tempUsers: [User] =
@@ -155,13 +165,14 @@ var tempUsers: [User] =
 
 func isValidEmail(email: String) -> Bool {
     let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-
+    
     let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
     return emailPred.evaluate(with: email)
 }
+
 func isValidPassword(password: String) -> Bool {
     let passwordRegEx = "^(?=.*?[A-Z])(?=.+[@ # $ % ^ & * /])(?=.*?[0-9]).{7,}$"
-
+    
     let passwordPred = NSPredicate(format:"SELF MATCHES %@", passwordRegEx)
     return passwordPred.evaluate(with: password)
 }

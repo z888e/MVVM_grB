@@ -14,14 +14,7 @@ struct TabBarView: View {
     
     var body: some View {
         TabView {
-            //FavoriteRecipesView()
-            //temp : lien vers profil
-            //ProfileView(loggedUser: $userVM.loggedUser)
-//                .tabItem {
-//                    Image(systemName: "heart.fill")
-//                    Text("Profil(temp)")
-//                }
-            ProfileView(loggedUser: User(id: 1, firstName: "", lastName: "", email: "", password: "", image: "", username: "", createdAt: "", updatedAt: ""), registeredSince: "")
+            ProfileView()
                 .tabItem {
                     Image(systemName: "person.fill").foregroundColor(.yellow)
                     Text("Profil")

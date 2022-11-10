@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    
     @EnvironmentObject var recipeVM: RecipeVM
     
     var body: some View {
