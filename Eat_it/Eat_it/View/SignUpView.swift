@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SignUpView: View {
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @EnvironmentObject var userVM: UserVM
     @State var firstname = ""
     @State var lastname = ""
@@ -116,6 +117,16 @@ struct SignUpView: View {
                 }
             }
         }
+        .navigationBarBackButtonHidden(true)
+                        .navigationBarItems(leading: Button(action : {
+                            self.mode.wrappedValue.dismiss()
+                        }){
+                            HStack {
+                                Image(systemName: "arrow.left")
+                                    .foregroundColor(Color.white)
+                                Text("Back").foregroundColor(.white)
+                            }
+                        })
     }
 }
 struct SignUpView_Previews: PreviewProvider {

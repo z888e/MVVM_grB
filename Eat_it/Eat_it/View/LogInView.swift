@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LogInView: View {
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @EnvironmentObject var userVM: UserVM
     @State var email = ""
     @State var password = ""
@@ -59,8 +60,18 @@ struct LogInView: View {
                     }
                 }
             }
-        }
     }
+        .navigationBarBackButtonHidden(true)
+                        .navigationBarItems(leading: Button(action : {
+                            self.mode.wrappedValue.dismiss()
+                        }){
+                            HStack {
+                                Image(systemName: "arrow.left")
+                                    .foregroundColor(Color.white)
+                                Text("Back").foregroundColor(.white)
+                            }
+                        })
+                }
 }
 
 struct LogInView_Previews: PreviewProvider {

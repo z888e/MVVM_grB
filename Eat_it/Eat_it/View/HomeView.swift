@@ -33,7 +33,6 @@ struct HomeView: View {
                             Text("Sign Up").foregroundColor(Color.white).fontWeight(.semibold)
                         }.padding()
                     }
-                    Spacer()
                     NavigationLink {
                         RecipeListView()
                     } label: {
