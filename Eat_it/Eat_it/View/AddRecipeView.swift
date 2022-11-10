@@ -27,24 +27,24 @@ struct AddRecipeView: View {
         NavigationView {
             ZStack {
                 VStack {
-                    ZStack {
-                        Rectangle()
-                            .frame(width: 400, height: 180)
-                            .foregroundColor(.gray).opacity(0.1)
-                            .padding()
-                        Circle()
-                            .foregroundColor(.gray).opacity(0.1)
-                            .frame(width: 100, height: 100)
-                            .overlay(Circle().stroke(Color("vertMoyen").opacity(0.9), lineWidth: 2))
-                        Image(systemName: "photo")
-                            .foregroundColor(Color("vertMoyen"))
-                        
-                        Text("Add photo")
-                            .foregroundColor(Color("vertMoyen"))
-                            .offset(y: 70)
-                        
-                        
-                    }
+//                    ZStack {
+//                        Rectangle()
+//                            .frame(width: 400, height: 180)
+//                            .foregroundColor(.gray).opacity(0.1)
+//                            .padding()
+//                        Circle()
+//                            .foregroundColor(.gray).opacity(0.1)
+//                            .frame(width: 100, height: 100)
+//                            .overlay(Circle().stroke(Color("vertMoyen").opacity(0.9), lineWidth: 2))
+//                        Image(systemName: "photo")
+//                            .foregroundColor(Color("vertMoyen"))
+//
+//                        Text("Add photo")
+//                            .foregroundColor(Color("vertMoyen"))
+//                            .offset(y: 70)
+//
+//
+//                    }
                     ZStack {
                         Form{
                             Section(header: Text("name")){
@@ -53,6 +53,10 @@ struct AddRecipeView: View {
                             }
                             Section(header: Text("Description")){
                                 TextField("Recipe description", text: $recipeDescription)
+                            }
+                            Section(header: Text("Steps")){
+                                TextField("Enter steps", text: $step)
+                                
                             }
                             Section(header: Text("Cooking time")){
                                 TextField("Enter time in minute", text: $recipeDescription)
@@ -98,6 +102,8 @@ struct AddRecipeView: View {
                         .offset(y: 270)
                     }
                 }
+                .navigationTitle("Add recipe")
+                .navigationBarTitleDisplayMode(.inline)
             }
         }
     }
