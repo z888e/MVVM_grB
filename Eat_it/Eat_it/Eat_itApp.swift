@@ -12,12 +12,14 @@ struct Eat_itApp: App {
     
     @StateObject var recipeVM = RecipeVM()
     @StateObject var userVM = UserVM()
-    
+    @StateObject var favoriteVM = FavoriteVM()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(recipeVM)
                 .environmentObject(userVM)
+                .environmentObject(favoriteVM)
         }
     }
 }

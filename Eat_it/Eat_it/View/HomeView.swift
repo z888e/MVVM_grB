@@ -34,7 +34,7 @@ struct HomeView: View {
                         }.padding()
                     }
                     NavigationLink {
-                        RecipeListView()
+                        TabBarView()
                     } label: {
                         Text("Continue without an account").foregroundColor(Color.white)
                     }

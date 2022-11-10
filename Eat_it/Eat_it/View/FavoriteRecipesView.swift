@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FavoriteRecipesView: View {
     
-    @EnvironmentObject var FavoriteVM: FavoriteVM
+    @EnvironmentObject var favoriteVM: FavoriteVM
     private let adaptiveColumns = [
         GridItem(.adaptive(minimum: 170))
     ]
@@ -19,7 +19,7 @@ struct FavoriteRecipesView: View {
             
             VStack {
                 
-                ForEach(FavoriteVM.favorites) { favorite in
+                ForEach(favoriteVM.favorites) { favorite in
                     Text(favorite.recipe.recipeName)
                 }
                 HStack {

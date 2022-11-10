@@ -11,16 +11,16 @@ struct ProfileView: View {
     
     var loggedUser: User
     var registeredSince: String = ""
-    
-    init(loggedUser: User, registeredSince: String) {
-        let formatter = RelativeDateTimeFormatter()
-        formatter.unitsStyle = .short
-        let dateFormatter = ISO8601DateFormatter()
-        let dateFormattedRegSince = dateFormatter.date(from:loggedUser.createdAt)!
-        let relativeDate = formatter.localizedString(for: dateFormattedRegSince, relativeTo: Date.now)
-        self.loggedUser = loggedUser
-        self.registeredSince = relativeDate
-    }
+
+//    init(loggedUser: User, registeredSince: String) {
+//        let formatter = RelativeDateTimeFormatter()
+//        formatter.unitsStyle = .short
+//        let dateFormatter = ISO8601DateFormatter()
+//        let dateFormattedRegSince = dateFormatter.date(from:loggedUser.createdAt)!
+//        let relativeDate = formatter.localizedString(for: dateFormattedRegSince, relativeTo: Date.now)
+//        self.loggedUser = loggedUser
+//        self.registeredSince = relativeDate
+//    }
     
     var body: some View {
         VStack{
