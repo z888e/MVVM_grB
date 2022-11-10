@@ -26,6 +26,9 @@
 		C80C03382915440F00F500B2 /* RecipeIngredientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80C03372915440F00F500B2 /* RecipeIngredientModel.swift */; };
 		C8636F792919373C00013259 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8636F782919373C00013259 /* TabBarView.swift */; };
 		C876832B291BA9280008212A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C876832A291BA9280008212A /* ProfileView.swift */; };
+		DC1B7B55291D02920059C069 /* StepUstensilModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1B7B54291D02920059C069 /* StepUstensilModel.swift */; };
+		DC1B7B57291D02FC0059C069 /* StepUstensilViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1B7B56291D02FC0059C069 /* StepUstensilViewModel.swift */; };
+		DC1B7B59291D0EC50059C069 /* ustensilViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1B7B58291D0EC50059C069 /* ustensilViewModel.swift */; };
 		DC6BAC0A29152B72000E284F /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6BAC0929152B72000E284F /* RecipeViewModel.swift */; };
 		DC6BAC0C29152B87000E284F /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6BAC0B29152B87000E284F /* RecipeModel.swift */; };
 		DCDE50122919315000B1CC39 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE50112919315000B1CC39 /* SignUpView.swift */; };
@@ -55,6 +58,9 @@
 		C80C03372915440F00F500B2 /* RecipeIngredientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeIngredientModel.swift; sourceTree = "<group>"; };
 		C8636F782919373C00013259 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		C876832A291BA9280008212A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		DC1B7B54291D02920059C069 /* StepUstensilModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepUstensilModel.swift; sourceTree = "<group>"; };
+		DC1B7B56291D02FC0059C069 /* StepUstensilViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepUstensilViewModel.swift; sourceTree = "<group>"; };
+		DC1B7B58291D0EC50059C069 /* ustensilViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ustensilViewModel.swift; sourceTree = "<group>"; };
 		DC6BAC0929152B72000E284F /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
 		DC6BAC0B29152B87000E284F /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		DCDE50112919315000B1CC39 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -136,6 +142,8 @@
 				1275238E291C0B5200EFC387 /* FavoriteViewModel.swift */,
 				DCDE50152919344800B1CC39 /* UserViewModel.swift */,
 				7B1B6EB229196572001D9717 /* StepViewModel.swift */,
+				DC1B7B56291D02FC0059C069 /* StepUstensilViewModel.swift */,
+				DC1B7B58291D0EC50059C069 /* ustensilViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -150,6 +158,7 @@
 				7B33E183291543BE00151CA3 /* UstensilModel.swift */,
 				C80C03352915421600F500B2 /* IngredientModel.swift */,
 				C80C03372915440F00F500B2 /* RecipeIngredientModel.swift */,
+				DC1B7B54291D02920059C069 /* StepUstensilModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -228,6 +237,8 @@
 				C80C03362915421600F500B2 /* IngredientModel.swift in Sources */,
 				C8636F792919373C00013259 /* TabBarView.swift in Sources */,
 				DC6BAC0A29152B72000E284F /* RecipeViewModel.swift in Sources */,
+				DC1B7B59291D0EC50059C069 /* ustensilViewModel.swift in Sources */,
+				DC1B7B57291D02FC0059C069 /* StepUstensilViewModel.swift in Sources */,
 				1275238F291C0B5200EFC387 /* FavoriteViewModel.swift in Sources */,
 				7B33E180291541BA00151CA3 /* UserModel.swift in Sources */,
 				C8000CFB2915267F00F6B0B7 /* ContentView.swift in Sources */,
@@ -246,6 +257,7 @@
 				7B33E184291543BF00151CA3 /* UstensilModel.swift in Sources */,
 				DCDE50162919344800B1CC39 /* UserViewModel.swift in Sources */,
 				DCDE5018291938FF00B1CC39 /* LogInView.swift in Sources */,
+				DC1B7B55291D02920059C069 /* StepUstensilModel.swift in Sources */,
 				7B33E182291542CC00151CA3 /* StepModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

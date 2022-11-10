@@ -7,6 +7,7 @@
 
 import Foundation
 
-struct Ustensil: Codable {
+struct Ustensil: Codable, Identifiable {
+    var id: Int
     var name: String?
 }
